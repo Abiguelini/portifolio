@@ -3,7 +3,7 @@ a {
   text-decoration: none;
   font-size: 12px;
   text-transform: uppercase;
-  background-color: #d4a373;
+  background-color: #a3c47c;
   padding: 12px;
   display: flex;
   -webkit-box-align: center;
@@ -14,7 +14,7 @@ a {
   margin-right: 20px;
 }
 a:hover {
-  background-color: #b28355;
+  background-color: #6b7f4e;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -44,7 +44,7 @@ div {
 }
 
 .primeiraDiv {
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
   padding: 20px;
 }
@@ -73,6 +73,7 @@ img {
 }
 
 .Descritivo {
+  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 20px;
 }
@@ -229,4 +230,49 @@ p {
   transform: none;
   box-shadow: none;
   text-decoration: underline;
+}
+.secao-habilidades {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: white;
+}
+
+.secao-habilidades h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.container-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.categoria-skill {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 250px;
+  flex: 1;
+}
+
+.categoria-skill h4 {
+  margin-bottom: 10px;
+  color: #a3c47c; /* Um verde mais claro para destacar */
+}
+
+.categoria-skill p {
+  margin: 0;
+  line-height: 1.5;
+}
+.visual img {
+    width: 250px;          /* Define largura fixa */
+    height: 250px;         /* Define altura igual à largura */
+    object-fit: cover;     /* Garante que a foto não fique achatada */
+    border-radius: 50%;    /* Transforma o quadrado em um círculo perfeito */
+    border: 5px solid #6b7f4e; /* Borda usando a cor marrom do seu tema */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra suave embaixo */
 }

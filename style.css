@@ -1,135 +1,232 @@
-a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    background-color:#D4A373;
-    padding: 12px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    border-radius: 3px;
-    margin-right: 20px;
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #d4a373;
+  padding: 12px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+a:hover {
+  background-color: #b28355;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 body {
-    font: 14px Roboto, sans-serif;
-    background-color: #6b7f4e;
-    background-image: url("./img/fundo-gatos.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
+  font:
+    14px Roboto,
+    sans-serif;
+  background-color: #6b7f4e;
+  background-image: url("./img/fundo-gatos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
-    padding: 0%;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 div {
-    display: block;
-    unicode-bidi: isolate;
+  display: block;
+  unicode-bidi: isolate;
 }
 
 .primeiraDiv {
-    flex-direction: row;
-    min-height: 100vh;
-    padding: 20px;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .primeiraDiv {
-    color: white;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
+  color: white;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
 .visual {
-    margin-bottom: 30px;
-    padding: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
 .Descritivo {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .segundaDiv {
-    padding: 20px;
-    max-width: 1140px;
-    margin: 0px auto;
+  padding: 20px;
+  max-width: 1140px;
+  margin: 0px auto;
 }
 
 .conteudo {
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px;
-    border-radius: 8px;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(30px); /* Move o card um pouco para baixo */
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.conteudo.visivel {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 1140px) {
-    .primeiraDiv {
-        flex-direction: column;
-    }
+  .primeiraDiv {
+    flex-direction: column;
+  }
 }
-@media (min-width: 601px){
-    .segundaDiv{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 40px;
-    }
+@media (min-width: 601px) {
+  .segundaDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
 
 h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
-.primeiraDiv.Descritivo{
-    text-align: center;
+.primeiraDiv.Descritivo {
+  text-align: center;
 }
 .contato {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    margin-top: 15px; 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+.conteudo img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: #f4f4f4;
+}
+.conteudo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resumoAlvaro {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.rodape {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  width: 100%;
+}
+.rodape h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.rodape p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.contatos-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px 0;
+  font-size: 1.1em;
+}
+
+.contatos-footer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 0.85em;
+  opacity: 0.6;
+  margin-top: 30px;
+}
+
+@media (min-width: 601px) {
+  .contatos-footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.link-rodape {
+  background-color: transparent;
+  color: #f4f4f4;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  text-transform: lowercase;
+  font-size: 1em;
+}
+.link-rodape:hover {
+  background-color: transparent;
+  color: #ffffff;
+  transform: none;
+  box-shadow: none;
+  text-decoration: underline;
 }
